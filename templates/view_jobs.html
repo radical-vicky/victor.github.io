@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Jobs</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Job Listings</h1>
+        {% for job in jobs %}
+            <div class="job">
+                <h2>{{ job[1] }}</h2>
+                <p>Company: {{ job[2] }}</p>
+                <p>Location: {{ job[3] }}</p>
+                <p>{{ job[4] }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
